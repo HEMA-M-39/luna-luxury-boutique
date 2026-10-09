@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Jewelry - Semantic Storefront</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header" aria-label="Main navigation">
+        <nav aria-label="Primary navigation">
+            <div class="logo-container">
+                <h1 class="logo-text" aria-hidden="true">LUNA JEWELRY</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span aria-hidden="true">Menu</span>
+            </button>
+            <ul class="nav-links" role="list">
+                <li><a href="#home" class="nav-link" aria-current="page">Home</a></li>
+                <li><a href="#collections" class="nav-link">Collections</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="cart-container" aria-label="Shopping cart">
+                <button class="cart-button" aria-label="View shopping cart" id="cart-button">
+                    <span aria-hidden="true">🛒</span>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content" role="main">
+        <section class="hero" id="home" aria-label="Hero section">
+            <div class="hero-content">
+                <span class="curator-badge" aria-label="Curator badge From Hema">From Hema</span>
+                <h1 class="hero-title" aria-label="Luna Jewelry hero title">Elegant Elegance</h1>
+                <p class="hero-subtitle" aria-label="Hero subtitle">Discover curated luxury jewelry collections</p>
+                <a href="#products" class="btn-primary" aria-label="Shop now button">Shop Collection</a>
+            </div>
+        </section>
+
+        <section class="filters" id="collections" aria-label="Product category filters">
+            <div class="filter-buttons" role="radiogroup" aria-label="Product category filters">
+                <button type="button" class="filter-btn active" data-filter="all" aria-checked="true">All</button>
+                <button type="button" class="filter-btn" data-filter="studs" aria-checked="false">Studs</button>
+                <button type="button" class="filter-btn" data-filter="hoops" aria-checked="false">Hoops</button>
+                <button type="button" class="filter-btn" data-filter="huggies" aria-checked="false">Huggies</button>
+                <button type="button" class="filter-btn" data-filter="chandeliers" aria-checked="false">Chandeliers</button>
+                <button type="button" class="filter-btn" data-filter="drops" aria-checked="false">Drops</button>
+                <button type="button" class="filter-btn" data-filter="cuffs" aria-checked="false">Cuffs</button>
+            </div>
+            <div class="filter-controls" aria-label="Filter and sort controls">
+                <label for="search-input" class="sr-only">Search products</label>
+                <input type="text" id="search-input" placeholder="Search..." class="search-input">
+                <select id="sort-select" class="sort-select" aria-label="Sort products">
+                    <option value="featured" selected>Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="products" id="products" aria-label="Product grid section">
+            <div class="product-grid" id="product-grid" aria-label="Product grid">
+                <!-- Products will be rendered by JavaScript -->
+            </div>
+        </section>
+
+        <section class="testimonials" id="about" aria-label="Customer testimonials">
+            <div class="testimonials-container" aria-label="Testimonials carousel">
+                <blockquote class="testimonial" aria-label="Customer testimonial 1">
+                    <p class="testimonial-text">"Absolutely stunning quality and craftsmanship! The attention to detail is incredible."</p>
+                    <cite class="testimonial-author">- Sarah T.</cite>
+                </blockquote>
+                <blockquote class="testimonial" aria-label="Customer testimonial 2">
+                    <p class="testimonial-text">"Received so many compliments every time I wear these."</p>
+                    <cite class="testimonial-author">- Michael R.</cite>
+                </blockquote>
+                <blockquote class="testimonial" aria-label="Customer testimonial 3">
+                    <p class="testimonial-text">"Best luxury jewelry experience online."</p>
+                    <cite class="testimonial-author">- Emily W.</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Site footer">
+        <div class.footer-content" aria-label="Footer content">
+            <div class="footer-brand" aria-label="Luna Jewelry brand">
+                <h4 class="footer-logo" aria-hidden="true">LUNA JEWELRY</h4>
+                <p class="footer-description">Curated luxury jewelry since 2010</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <ul role="list">
+                    <li><a href="#" class="footer-link">Home</a></li>
+                    <li><a href="#collections" class="footer-link">Collections</a></li>
+                    <li><a href="#about" class="footer-link">About</a></li>
+                    <li><a href="#contact" class="footer-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social" aria-label="Social media links">
+                <a href="#" class="footer-social-link" aria-label="Instagram">Instagram</a>
+                <a href="#" class="footer-social-link" aria-label="Facebook">Facebook</a>
+                <a href="#" class="footer-social-link" aria-label="Twitter">Twitter</a>
+            </div>
+            <p class="footer-copyright" aria-label="Copyright">© 2024 Luna Jewelry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <dialog class="quick-view-modal" aria-label="Product quick view" id="quick-view-modal" open>
+        <div class="quick-view-content" role="document">
+            <button class="close-modal" aria-label="Close quick view dialog" onclick="closeQuickView()">
+                <span aria-hidden="true">×</span>
+            </button>
+            <div class="quick-view-image" aria-label="Product image"></div>
+            <div class="quick-view-details" aria-label="Product details">
+                <h2 class="quick-view-title" id="quick-view-title"></h2>
+                <p class="quick-view-price" id="quick-view-price"></p>
+                <p class="quick-view-description" id="quick-view-description"></p>
+                <button class="add-to-cart-btn" aria-label="Add to cart" onclick="addToCartQuickView()
